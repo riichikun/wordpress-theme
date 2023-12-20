@@ -1,0 +1,224 @@
+:root {
+  --main-dark-color: rgb(27, 0, 97);
+  --main-padding-size-1440: 12%;
+  --main-padding-size-768: 3%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, p, a, div, i {
+  font-family: "Literata", serif;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+/* common classes **********************************************************************************************/
+.up-t {
+  text-transform: uppercase;
+}
+
+.orb-f {
+  font-family: "Orbitron", sans-serif;
+}
+
+.lit-f {
+  font-family: "Literata", serif;
+}
+
+/* header ******************************************************************************************************/
+header {
+  background-color: var(--main-dark-color);
+}
+header h1, header h2, header h3, header h4, header h5, header p, header a, header div, header i {
+  color: #fff;
+  font-family: "Literata", serif;
+}
+header a {
+  text-decoration: none;
+}
+
+/* header-top */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.icons {
+  gap: 20px;
+  align-items: center;
+}
+.icons a {
+  font-size: 36px;
+}
+
+/* nav */
+/* burger */
+.menu-burger {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.menu-burger span {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  height: 2px;
+  width: 100%;
+  top: 9px;
+  transition: all 0.25s ease 0s;
+}
+
+.menu-burger:after, .menu-burger:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.menu-burger:after {
+  bottom: 0;
+  transition: all 0.25s;
+}
+
+.menu-burger:before {
+  top: 1px;
+  transition: all 0.25s;
+}
+
+.menu-burger.active:before {
+  transform: rotate(45deg);
+  top: 10px;
+  transition: all 0.25s;
+}
+
+.menu-burger.active:after {
+  transform: rotate(-45deg);
+  top: 10px;
+  transition: all 0.25s;
+}
+
+.menu-burger.active > span {
+  opacity: 0;
+  z-index: 100;
+}
+
+header nav .menu-navigation-container {
+  width: 100%;
+}
+header nav #menu-navigation {
+  transition: all 0.3s;
+  height: 0;
+}
+header nav ul {
+  display: flex;
+  padding: 20px 0;
+  list-style: none;
+  gap: 8.7%;
+}
+header nav div > ul > li:nth-of-type(1) {
+  border-left: #a600ff 2px solid;
+}
+header nav div > ul > li:nth-of-type(2) {
+  border-left: #00ffc3 2px solid;
+}
+header nav div > ul > li:nth-of-type(3) {
+  border-left: rgb(139, 255, 182) 2px solid;
+}
+header nav div > ul > li:nth-of-type(4) {
+  border-left: rgb(246, 255, 164) 2px solid;
+}
+header nav div > ul > li:nth-of-type(5) {
+  border-left: rgb(255, 238, 125) 2px solid;
+}
+header nav div > ul > li:nth-of-type(6) {
+  border-left: rgb(255, 0, 162) 2px solid;
+}
+header nav a {
+  padding-left: 6px;
+  height: -moz-fit-content;
+  height: fit-content;
+  transition: all 0.3s;
+}
+header nav a:hover {
+  padding-left: 15px;
+  transition: all 0.5s;
+}
+header nav.active {
+  display: flex;
+  position: fixed;
+  bottom: 44px;
+  left: 0;
+  width: 100%;
+  padding: 32px 0;
+}
+header nav.active .menu-navigation-container {
+  display: flex;
+  justify-content: end;
+  z-index: 100;
+}
+header nav.active #menu-navigation {
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+  gap: 20px;
+  flex-direction: column;
+  width: 140px;
+  transition: all 0.3s;
+  z-index: 100;
+}
+
+/* footer ********************************************************************************************************
+********************************************************************************************************************/
+/* footer nav */
+#FooterNavPages.active, #FooterNavCategories.active {
+  flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
+  transition: all 0.3s;
+  display: flex;
+}
+#FooterNavPages.active a, #FooterNavCategories.active a {
+  display: inline;
+}
+
+#FooterNavCategories a {
+  display: none;
+  color: #fff;
+}
+
+/* media-quaery *********************************************************************************************************
+*************************************************************************************************************************
+************************************************************************************************************************/
+@media (min-width: 1152px) {
+  /*
+      header nav.active {
+          display: flex;
+          position: static;
+          width: 100%;
+          padding: 32px 0;
+          height: fit-content;
+      #menu-navigation {
+          flex-direction: row;
+      }
+  }   */
+  header nav #menu-navigation {
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 0;
+  }
+}/*# sourceMappingURL=index.css.map */
